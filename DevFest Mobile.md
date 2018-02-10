@@ -566,26 +566,28 @@ For our list of pokemon, we'll be calling the `pokedex/1/` endpoint. If you look
 Your response will be a [JSON][json] object, which is basically just a list of key-value pairs. Inside of that, we'll see a key, `pokemon`, inside of which is a list of Pokemon:
 
 ```json
-"pokemon": [
+
+"pokemon_entries": [
     {
-        "name": "rattata",
-        "resource_uri": "api/v1/pokemon/19/"
+        "entry_number": 1,
+        "pokemon_species": {
+            "url": "https://pokeapi.co/api/v2/pokemon-species/1/",
+            "name": "bulbasaur"
+        }
     },
     {
-        "name": "charmander",
-        "resource_uri": "api/v1/pokemon/4/"
+        "entry_number": 2,
+        "pokemon_species": {
+            "url": "https://pokeapi.co/api/v2/pokemon-species/2/",
+            "name": "ivysaur"
+        }
     },
     {
-        "name": "charmeleon",
-        "resource_uri": "api/v1/pokemon/5/"
-    },
-    {
-        "name": "wartortle",
-        "resource_uri": "api/v1/pokemon/8/"
-    },
-    {
-        "name": "blastoise",
-        "resource_uri": "api/v1/pokemon/9/"
+        "entry_number": 3,
+        "pokemon_species": {
+            "url": "https://pokeapi.co/api/v2/pokemon-species/3/",
+            "name": "venusaur"
+        }
     },
     ...
 ]
