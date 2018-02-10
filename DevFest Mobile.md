@@ -829,39 +829,35 @@ Now, we're ready to run our app! Enter our Pokedex; you should temporarily see o
 
 #### [Download Prerequisite Code](https://dl.dropboxusercontent.com/s/bvbgu1yqkgmh9kl/Pokedex-level4-starter.zip)
 
-Now that we have a list, it would be great to have more details about each individual Pokemon, as a Pokedex should. To do this, take a look at the `resource_uri` for our first Pokemon, Rattata: `api/v1/pokemon/19/`. Append this to `http://pokeapi.co/`, enter it in your browser search box, and you should get these results:
+Now that we have a list, it would be great to have more details about each individual Pokemon, as a Pokedex should. To do this, take a look at the `resource_uri` for our first Pokemon, Rattata: `api/v2/pokemon/19/`. Append this to `http://pokeapi.co/`, enter it in your browser search box, and you should get these results:
 
 ```json
 {
-    "abilities": [
+
+    "forms": [
         {
-            "name": "run-away",
-            "resource_uri": "/api/v1/ability/50/"
-        },
-        {
-            "name": "hustle",
-            "resource_uri": "/api/v1/ability/55/"
-        },
-        {
-            "name": "guts",
-            "resource_uri": "/api/v1/ability/62/"
+            "url": "https://pokeapi.co/api/v2/pokemon-form/1/",
+            "name": "bulbasaur"
         }
     ],
-    "attack": 56,
-    "catch_rate": 0,
-    "created": "2013-11-03T15:05:41.305777",
-    "defense": 35,
-    "descriptions": [
+    "abilities": [
         {
-            "name": "rattata_gen_1",
-            "resource_uri": "/api/v1/description/290/"
+            "slot": 3,
+            "is_hidden": true,
+            "ability": {
+                "url": "https://pokeapi.co/api/v2/ability/34/",
+                "name": "chlorophyll"
+            }
         },
         {
-            "name": "rattata_gen_1",
-            "resource_uri": "/api/v1/description/291/"
-        },
-        ...
-    ]
+            "slot": 1,
+            "is_hidden": false,
+            "ability": {
+                "url": "https://pokeapi.co/api/v2/ability/65/",
+                "name": "overgrow"
+            }
+        }
+    ],
     ...
 }
 ```
